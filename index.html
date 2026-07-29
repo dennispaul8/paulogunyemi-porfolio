@@ -179,6 +179,23 @@
   .tool-card{
     border:1px solid var(--line); border-radius:10px; padding:20px;
     background:var(--card);
+    transition:border-color .2s, transform .2s;
+  }
+  .tool-card:hover{border-color:var(--accent); transform:translateY(-2px);}
+  .tool-logo{
+    width:48px; height:48px; margin-bottom:16px;
+    border-radius:10px;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--card-hi);
+    border:1px solid var(--line);
+    overflow:hidden;
+  }
+  .tool-logo img{
+    width:100%; height:100%; display:block;
+    object-fit:contain;
+  }
+  .tool-logo.tool-logo--pad img{
+    width:70%; height:70%;
   }
   .tool-name{font-family:'Space Grotesk'; font-weight:600; font-size:16px;}
   .tool-use{font-size:12.5px; color:var(--ink-dim); margin-top:8px;}
@@ -332,22 +349,37 @@
     </div>
     <div class="tool-grid">
       <div class="tool-card">
+        <div class="tool-logo" aria-hidden="true">
+          <img src="logos/kling.png" alt="" width="48" height="48" loading="lazy">
+        </div>
         <div class="tool-name">Kling</div>
         <div class="tool-use">Video generation — motion, camera work, narrative sequences.</div>
       </div>
       <div class="tool-card">
+        <div class="tool-logo tool-logo--pad" aria-hidden="true">
+          <img src="logos/magnific.png" alt="" width="48" height="48" loading="lazy">
+        </div>
         <div class="tool-name">Magnific</div>
         <div class="tool-use">Upscaling and image refinement — pushing generations to publish quality.</div>
       </div>
       <div class="tool-card">
+        <div class="tool-logo" aria-hidden="true">
+          <img src="logos/higgsfield.png" alt="" width="48" height="48" loading="lazy">
+        </div>
         <div class="tool-name">Higgsfield AI</div>
         <div class="tool-use">Stylized video and motion effects for short-form content.</div>
       </div>
       <div class="tool-card">
+        <div class="tool-logo tool-logo--pad" aria-hidden="true">
+          <img src="logos/google-flow.png" alt="" width="48" height="48" loading="lazy">
+        </div>
         <div class="tool-name">Google Flow</div>
         <div class="tool-use">Scene generation and video composition.</div>
       </div>
       <div class="tool-card">
+        <div class="tool-logo" aria-hidden="true">
+          <img src="logos/grok.png" alt="" width="48" height="48" loading="lazy">
+        </div>
         <div class="tool-name">Grok</div>
         <div class="tool-use">Video generation for fast-turnaround, concept-driven pieces.</div>
       </div>
